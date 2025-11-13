@@ -1,32 +1,38 @@
 import { useState } from "react";
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery2 from "@/assets/gallery-2.jpg";
+import gallery3 from "@/assets/gallery-3.jpg";
+import gallery4 from "@/assets/gallery-4.jpg";
+import gallery5 from "@/assets/gallery-5.jpg";
+import gallery6 from "@/assets/gallery-6.jpg";
 
 const Gallery = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070",
-      alt: "Wedding celebration moment",
+      url: gallery1,
+      alt: "Portrait photography by Jaypstudios",
     },
     {
-      url: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=2787",
-      alt: "Couple portrait",
+      url: gallery2,
+      alt: "Professional headshot by Jaypstudios",
     },
     {
-      url: "https://images.unsplash.com/photo-1591604466107-ec97de577aff?q=80&w=2071",
-      alt: "Candid laughter",
+      url: gallery3,
+      alt: "Family portrait session",
     },
     {
-      url: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=2070",
-      alt: "Group celebration",
+      url: gallery4,
+      alt: "Candid portrait photography",
     },
     {
-      url: "https://images.unsplash.com/photo-1523438097201-512ae7d59c44?q=80&w=2787",
-      alt: "Joyful moment",
+      url: gallery5,
+      alt: "Professional photography session",
     },
     {
-      url: "https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=2069",
-      alt: "Portrait session",
+      url: gallery6,
+      alt: "Portrait photography",
     },
   ];
 
@@ -35,10 +41,10 @@ const Gallery = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
-            Recent Work
+            Portfolio
           </h2>
           <p className="text-lg text-muted-foreground">
-            A glimpse into our photography journey
+            Capturing authentic moments and genuine emotions
           </p>
         </div>
 

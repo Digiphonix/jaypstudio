@@ -5,11 +5,10 @@ const Contact = () => {
     <section id="contact" className="py-24 px-6 bg-background">
       <div className="container mx-auto max-w-4xl text-center">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-8">
-          Let's Create Together
+          Let&apos;s Create Together
         </h2>
         <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Ready to capture your special moments? Get in touch and let's discuss
-          how we can bring your vision to life.
+          Want to chat about your portrait vision? Ready to capture your special moments? Get in touch and let&apos;s discuss how we can bring your vision to life.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button

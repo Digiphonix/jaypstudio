@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import heroImage from "@/assets/hero-main.jpg";
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -14,7 +15,10 @@ const Hero = () => {
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=2787')] bg-cover bg-center opacity-60" />
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-60"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
       </div>
 
       <div className="absolute inset-0 flex items-center justify-center">
@@ -26,10 +30,10 @@ const Hero = () => {
           }`}
         >
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-primary-foreground mb-6 tracking-tight">
-            Photography Studio
+            From Candid Laughter to Joyful Celebrations
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-primary-foreground/90 font-light tracking-wide italic max-w-3xl mx-auto">
-            Capturing Motion, Emotion, & Film Feels
+          <p className="text-lg md:text-xl lg:text-2xl text-primary-foreground/90 font-light tracking-wide max-w-3xl mx-auto">
+            At Jaypstudios, we believe that great photography isn&apos;t just about capturing faces — it&apos;s about capturing the emotions behind the facial expressions, and creating images that feel as powerful as the memories themselves.
           </p>
         </div>
       </div>

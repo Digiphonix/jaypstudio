@@ -4,13 +4,10 @@ const About = () => {
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-8">
-            From Candid Laughter to Joyful Celebrations
+            Welcome
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            At Jaypstudios, we believe that great photography isn't just about
-            capturing faces — it's about capturing the emotions behind the
-            facial expressions, and creating images that feel as powerful as the
-            memories themselves.
+            There&apos;s power in a single portrait - the kind that reveals your essence, confidence, or quiet strength. Whether it&apos;s a professional headshot, family session or something just for you, we aim to capture you in the most authentic light. We aim to bring your portrait vision to life, tailor-made for you.
           </p>
         </div>
 
