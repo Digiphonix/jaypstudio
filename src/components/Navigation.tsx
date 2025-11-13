@@ -16,10 +16,10 @@ const Navigation = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Gallery", href: "#gallery" },
+    { name: "Services", href: "/services" },
     { name: "IG", href: "#instagram" },
     { name: "Blog", href: "#blog" },
     { name: "Contact", href: "#contact" },
-    { name: "Pricing", href: "#pricing" },
   ];
 
   return (

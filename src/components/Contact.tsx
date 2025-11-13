@@ -21,8 +21,9 @@ const Contact = () => {
             size="lg"
             variant="outline"
             className="border-2 px-8 py-6 text-lg"
+            asChild
           >
-            View Pricing
+            <a href="/services">View Pricing</a>
           </Button>
         </div>
       </div>
