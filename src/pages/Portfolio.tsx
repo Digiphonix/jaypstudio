@@ -8,6 +8,13 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+import gallery8 from "@/assets/gallery-8.jpg";
+import gallery10 from "@/assets/gallery-10.jpg";
+import gallery13 from "@/assets/gallery-13.jpg";
+import gallery14 from "@/assets/gallery-14.jpg";
+import gallery15 from "@/assets/gallery-15.jpg";
+import gallery16 from "@/assets/gallery-16.jpg";
+import gallery18 from "@/assets/gallery-18.jpg";
 
 const Portfolio = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -20,19 +27,36 @@ const Portfolio = () => {
       { url: gallery4, alt: "Wedding celebration moment" },
       { url: gallery5, alt: "Event photography" },
       { url: gallery6, alt: "Candid portrait photography" },
+      { url: gallery8, alt: "Group portrait photography" },
+      { url: gallery10, alt: "Professional portrait session" },
+      { url: gallery13, alt: "Expressive portrait by Jaypstudios" },
+      { url: gallery14, alt: "Elegant portrait photography" },
+      { url: gallery15, alt: "Creative portrait session" },
+      { url: gallery16, alt: "Candid wedding moment" },
+      { url: gallery18, alt: "Joyful celebration portrait" },
     ],
     weddings: [
       { url: gallery4, alt: "Wedding celebration moment" },
       { url: gallery2, alt: "Wedding portrait" },
+      { url: gallery16, alt: "Candid wedding moment" },
+      { url: gallery14, alt: "Elegant wedding portrait" },
+      { url: gallery18, alt: "Joyful wedding celebration" },
     ],
     portraits: [
       { url: gallery1, alt: "Portrait photography by Jaypstudios" },
       { url: gallery3, alt: "Family portrait session" },
       { url: gallery6, alt: "Candid portrait photography" },
+      { url: gallery10, alt: "Professional portrait session" },
+      { url: gallery13, alt: "Expressive portrait by Jaypstudios" },
+      { url: gallery14, alt: "Elegant portrait photography" },
+      { url: gallery15, alt: "Creative portrait session" },
+      { url: gallery18, alt: "Joyful celebration portrait" },
     ],
     events: [
       { url: gallery5, alt: "Event photography" },
       { url: gallery2, alt: "Professional event headshot" },
+      { url: gallery8, alt: "Group event photography" },
+      { url: gallery16, alt: "Candid event moment" },
     ],
   };
 
