@@ -20,31 +20,23 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#gallery"
+                  href="/portfolio"
                   className="text-accent-foreground/80 hover:text-accent-foreground transition-colors"
                 >
-                  Gallery
+                  Portfolio
                 </a>
               </li>
               <li>
                 <a
-                  href="#blog"
+                  href="/services"
                   className="text-accent-foreground/80 hover:text-accent-foreground transition-colors"
                 >
-                  Blog
+                  Services
                 </a>
               </li>
               <li>
                 <a
-                  href="#pricing"
-                  className="text-accent-foreground/80 hover:text-accent-foreground transition-colors"
-                >
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
+                  href="/#contact"
                   className="text-accent-foreground/80 hover:text-accent-foreground transition-colors"
                 >
                   Contact
@@ -59,7 +51,9 @@ const Footer = () => {
             </h4>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.instagram.com/jaypstudios/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-accent-foreground/80 hover:text-accent-foreground transition-colors"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
