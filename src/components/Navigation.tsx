@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import logoBlack from "@/assets/logo-black.png";
+import logoWhite from "@/assets/logo-white.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,15 +34,12 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2">
-            <span
-              className={cn(
-                "text-2xl font-serif font-bold tracking-tight transition-colors",
-                isScrolled ? "text-foreground" : "text-primary-foreground"
-              )}
-            >
-              JayP Studios
-            </span>
+          <Link to="/" className="flex items-center">
+            <img
+              src={isScrolled ? logoBlack : logoWhite}
+              alt="JayP Studios"
+              className="h-12 w-auto transition-opacity"
+            />
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
