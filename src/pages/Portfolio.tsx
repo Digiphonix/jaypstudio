@@ -101,6 +101,45 @@ const Portfolio = () => {
             </p>
           </div>
 
+          {/* Feature Section with Circular Images */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                <img src={gallery1} alt="Authentic Moments" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="text-2xl font-serif font-bold text-foreground mb-3">
+                Authentic Moments
+              </h3>
+              <p className="text-muted-foreground">
+                Capturing genuine emotions and real connections
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                <img src={gallery4} alt="Emotional Storytelling" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="text-2xl font-serif font-bold text-foreground mb-3">
+                Emotional Storytelling
+              </h3>
+              <p className="text-muted-foreground">
+                Every image tells a story worth remembering
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                <img src={gallery10} alt="Timeless Quality" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="text-2xl font-serif font-bold text-foreground mb-3">
+                Timeless Quality
+              </h3>
+              <p className="text-muted-foreground">
+                Creating images as powerful as the memories
+              </p>
+            </div>
+          </div>
+
           <Tabs defaultValue="all" className="w-full">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-4 mb-12">
               <TabsTrigger value="all" className="text-sm md:text-base">
