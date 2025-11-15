@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
@@ -70,6 +72,14 @@ const Gallery = () => {
               />
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Link to="/portfolio">
+            <Button size="lg" variant="default">
+              See More
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
