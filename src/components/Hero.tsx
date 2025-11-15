@@ -1,11 +1,23 @@
 import { useEffect, useState } from "react";
-import heroImage from "@/assets/hero-main.jpg";
+import heroImage1 from "@/assets/hero-main.jpg";
+import heroImage2 from "@/assets/gallery-1.jpg";
+import heroImage3 from "@/assets/gallery-2.jpg";
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [heroImage1, heroImage2, heroImage3];
 
   useEffect(() => {
     setIsLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -16,8 +28,8 @@ const Hero = () => {
         }`}
       >
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-60"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          className="absolute inset-0 bg-cover bg-center opacity-40 transition-opacity duration-1000"
+          style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
         />
       </div>
 
