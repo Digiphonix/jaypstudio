@@ -20,20 +20,20 @@ const Portfolio = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const portfolioData = {
-    all: [
+    familyPortraits: [
       { url: gallery1, alt: "Portrait photography by Jaypstudios" },
-      { url: gallery2, alt: "Professional headshot by Jaypstudios" },
       { url: gallery3, alt: "Family portrait session" },
-      { url: gallery4, alt: "Wedding celebration moment" },
-      { url: gallery5, alt: "Event photography" },
       { url: gallery6, alt: "Candid portrait photography" },
-      { url: gallery8, alt: "Group portrait photography" },
       { url: gallery10, alt: "Professional portrait session" },
       { url: gallery13, alt: "Expressive portrait by Jaypstudios" },
-      { url: gallery14, alt: "Elegant portrait photography" },
       { url: gallery15, alt: "Creative portrait session" },
-      { url: gallery16, alt: "Candid wedding moment" },
-      { url: gallery18, alt: "Joyful celebration portrait" },
+    ],
+    branding: [
+      { url: gallery2, alt: "Professional headshot by Jaypstudios" },
+      { url: gallery8, alt: "Group portrait photography" },
+      { url: gallery10, alt: "Professional portrait session" },
+      { url: gallery14, alt: "Elegant portrait photography" },
+      { url: gallery5, alt: "Personal branding photography" },
     ],
     weddings: [
       { url: gallery4, alt: "Wedding celebration moment" },
@@ -42,25 +42,9 @@ const Portfolio = () => {
       { url: gallery14, alt: "Elegant wedding portrait" },
       { url: gallery18, alt: "Joyful wedding celebration" },
     ],
-    portraits: [
-      { url: gallery1, alt: "Portrait photography by Jaypstudios" },
-      { url: gallery3, alt: "Family portrait session" },
-      { url: gallery6, alt: "Candid portrait photography" },
-      { url: gallery10, alt: "Professional portrait session" },
-      { url: gallery13, alt: "Expressive portrait by Jaypstudios" },
-      { url: gallery14, alt: "Elegant portrait photography" },
-      { url: gallery15, alt: "Creative portrait session" },
-      { url: gallery18, alt: "Joyful celebration portrait" },
-    ],
-    events: [
-      { url: gallery5, alt: "Event photography" },
-      { url: gallery2, alt: "Professional event headshot" },
-      { url: gallery8, alt: "Group event photography" },
-      { url: gallery16, alt: "Candid event moment" },
-    ],
   };
 
-  const renderGallery = (images: typeof portfolioData.all) => (
+  const renderGallery = (images: typeof portfolioData.familyPortraits) => (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
       {images.map((image, index) => (
         <div
@@ -101,36 +85,29 @@ const Portfolio = () => {
             </p>
           </div>
 
-          <Tabs defaultValue="all" className="w-full">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-4 mb-12">
-              <TabsTrigger value="all" className="text-sm md:text-base">
-                All
+          <Tabs defaultValue="familyPortraits" className="w-full">
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-3 mb-12">
+              <TabsTrigger value="familyPortraits" className="text-sm md:text-base">
+                Family Portraits
+              </TabsTrigger>
+              <TabsTrigger value="branding" className="text-sm md:text-base">
+                Branding
               </TabsTrigger>
               <TabsTrigger value="weddings" className="text-sm md:text-base">
                 Weddings
               </TabsTrigger>
-              <TabsTrigger value="portraits" className="text-sm md:text-base">
-                Portraits
-              </TabsTrigger>
-              <TabsTrigger value="events" className="text-sm md:text-base">
-                Events
-              </TabsTrigger>
             </TabsList>
 
-            <TabsContent value="all" className="mt-0">
-              {renderGallery(portfolioData.all)}
+            <TabsContent value="familyPortraits" className="mt-0">
+              {renderGallery(portfolioData.familyPortraits)}
+            </TabsContent>
+
+            <TabsContent value="branding" className="mt-0">
+              {renderGallery(portfolioData.branding)}
             </TabsContent>
 
             <TabsContent value="weddings" className="mt-0">
               {renderGallery(portfolioData.weddings)}
-            </TabsContent>
-
-            <TabsContent value="portraits" className="mt-0">
-              {renderGallery(portfolioData.portraits)}
-            </TabsContent>
-
-            <TabsContent value="events" className="mt-0">
-              {renderGallery(portfolioData.events)}
             </TabsContent>
           </Tabs>
         </div>

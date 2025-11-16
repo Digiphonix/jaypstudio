@@ -152,12 +152,11 @@ const Contact = () => {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="portrait">Portrait Session</SelectItem>
-                        <SelectItem value="wedding">Wedding Photography</SelectItem>
-                        <SelectItem value="event">Event Photography</SelectItem>
-                        <SelectItem value="family">Family Photos</SelectItem>
-                        <SelectItem value="headshot">Professional Headshots</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
+                        <SelectItem value="weddings">Weddings</SelectItem>
+                        <SelectItem value="events">Events</SelectItem>
+                        <SelectItem value="portraits">Portraits (Family, Personal)</SelectItem>
+                        <SelectItem value="branding">Personal Branding</SelectItem>
+                        <SelectItem value="business">Small Business</SelectItem>
                       </SelectContent>
                     </Select>
                     <FormMessage />
@@ -166,12 +165,12 @@ const Contact = () => {
               />
             </div>
 
-            <FormField
-              control={form.control}
-              name="eventDate"
-              render={({ field }) => (
-                <FormItem className="flex flex-col">
-                  <FormLabel>Preferred Date *</FormLabel>
+              <FormField
+                control={form.control}
+                name="eventDate"
+                render={({ field }) => (
+                  <FormItem className="flex flex-col">
+                    <FormLabel>Preferred Date of Event or Photoshoot *</FormLabel>
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
