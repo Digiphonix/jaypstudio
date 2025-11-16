@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import logoBlack from "@/assets/logo-black.png";
 import logoWhite from "@/assets/logo-white.png";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,26 +60,43 @@ const Navigation = () => {
             ))}
           </div>
 
-          <button
-            className={cn(
-              "md:hidden",
-              isScrolled ? "text-foreground" : "text-primary-foreground"
-            )}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <button
+                className={cn(
+                  "md:hidden",
+                  isScrolled ? "text-foreground" : "text-primary-foreground"
+                )}
+              >
+                <Menu className="w-6 h-6" />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <nav className="flex flex-col gap-6 mt-8">
+                {navLinks.map((link) => (
+                  link.href.startsWith("#") ? (
+                    <a
+                      key={link.name}
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className="text-lg font-medium tracking-wide uppercase transition-colors hover:text-accent"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link
+                      key={link.name}
+                      to={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className="text-lg font-medium tracking-wide uppercase transition-colors hover:text-accent"
+                    >
+                      {link.name}
+                    </Link>
+                  )
+                ))}
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </nav>
