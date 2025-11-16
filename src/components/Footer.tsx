@@ -82,7 +82,7 @@ const Footer = () => {
 
         <div className="border-t border-accent-foreground/20 pt-8 text-center">
           <p className="text-accent-foreground/60">
-            © {new Date().getFullYear()} JayP Studios. All rights reserved.
+            © {new Date().getFullYear()} JayPStudios. All rights reserved.
           </p>
         </div>
       </div>
