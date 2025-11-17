@@ -28,7 +28,7 @@ const Hero = () => {
         }`}
       >
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-30 transition-opacity duration-1000"
+          className="absolute inset-0 bg-cover bg-center opacity-15 transition-opacity duration-1000"
           style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
         />
       </div>
