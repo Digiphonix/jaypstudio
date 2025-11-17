@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-serif font-bold text-accent-foreground mb-4">
-              JayP Studios
+              JayPStudios
             </h3>
             <p className="text-accent-foreground/80">
               Professional photography capturing emotions and memories that last

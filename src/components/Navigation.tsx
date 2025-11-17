@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import logoBlack from "@/assets/logo-black.png";
 import logoWhite from "@/assets/logo-white.png";
@@ -9,6 +9,8 @@ import { Menu } from "lucide-react";
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,11 +28,13 @@ const Navigation = () => {
     { name: "Contact", href: "#contact" },
   ];
 
+  const shouldShowDark = isScrolled || !isHomePage;
+
   return (
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
+        shouldShowDark
           ? "bg-background/48 backdrop-blur-sm shadow-sm"
           : "bg-transparent"
       )}
@@ -39,7 +43,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <img
-              src={isScrolled ? logoBlack : logoWhite}
+              src={shouldShowDark ? logoBlack : logoWhite}
               alt="JayP Studios"
               className="h-12 w-auto transition-opacity"
             />
@@ -52,7 +56,7 @@ const Navigation = () => {
                 href={link.href}
                 className={cn(
                   "text-sm font-medium tracking-wide uppercase transition-colors hover:text-accent",
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
+                  shouldShowDark ? "text-foreground" : "text-primary-foreground"
                 )}
               >
                 {link.name}
@@ -65,7 +69,7 @@ const Navigation = () => {
               <button
                 className={cn(
                   "md:hidden",
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
+                  shouldShowDark ? "text-foreground" : "text-primary-foreground"
                 )}
               >
                 <Menu className="w-6 h-6" />
