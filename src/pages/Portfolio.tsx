@@ -46,15 +46,12 @@ const Portfolio = () => {
     branding: [
       { url: gallery2, alt: "Professional headshot by Jaypstudios" },
       { url: gallery8, alt: "Group portrait photography" },
-      { url: gallery10, alt: "Professional portrait session" },
-      { url: gallery14, alt: "Elegant portrait photography" },
       { url: gallery5, alt: "Personal branding photography" },
+      { url: gallery14, alt: "Elegant portrait photography" },
     ],
     weddings: [
       { url: gallery4, alt: "Wedding celebration moment" },
-      { url: gallery2, alt: "Wedding portrait" },
       { url: gallery16, alt: "Candid wedding moment" },
-      { url: gallery14, alt: "Elegant wedding portrait" },
       { url: gallery18, alt: "Joyful wedding celebration" },
     ],
   };
