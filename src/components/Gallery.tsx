@@ -39,7 +39,7 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-24 px-6 bg-muted/30">
+    <section id="gallery" className="py-24 px-6 bg-muted/15">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
@@ -67,7 +67,7 @@ const Gallery = () => {
               />
               <div
                 className={`absolute inset-0 bg-black transition-opacity duration-300 ${
-                  hoveredIndex === index ? "opacity-20" : "opacity-0"
+                  hoveredIndex === index ? "opacity-10" : "opacity-0"
                 }`}
               />
             </div>
