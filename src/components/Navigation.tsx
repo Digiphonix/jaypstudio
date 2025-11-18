@@ -23,9 +23,8 @@ const Navigation = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Portfolio", href: "/portfolio" },
-    { name: "Services", href: "/services" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "#contact" },
+    { name: "Services & Investment", href: "/services" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   const shouldShowDark = isScrolled || !isHomePage;
