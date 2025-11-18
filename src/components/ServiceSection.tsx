@@ -4,54 +4,47 @@ import { Button } from "@/components/ui/button";
 interface ServiceSectionProps {
   title: string;
   description: string;
-  images: string[];
+  image: string;
   reverse?: boolean;
 }
 
-const ServiceSection = ({ title, description, images, reverse = false }: ServiceSectionProps) => {
+const ServiceSection = ({ title, description, image, reverse = false }: ServiceSectionProps) => {
   return (
-    <section className="py-24 px-6 bg-background">
-      <div className="container mx-auto max-w-7xl">
-        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${reverse ? 'lg:flex-row-reverse' : ''}`}>
-          {/* Text Content */}
-          <div className={`${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6 uppercase tracking-wide">
-              {title}
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              {description}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/#contact">
-                <Button size="lg" className="px-6">
-                  Get a Quote
-                </Button>
-              </Link>
-              <Link to="/portfolio">
-                <Button size="lg" variant="outline" className="px-6">
-                  View Portfolio
-                </Button>
-              </Link>
-            </div>
-          </div>
+    <section className="relative w-full min-h-[600px] overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src={image} 
+          alt={title} 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
+      </div>
 
-          {/* Image Grid */}
-          <div className={`${reverse ? 'lg:order-1' : 'lg:order-2'}`}>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <div className="aspect-[3/4] overflow-hidden rounded-lg">
-                  <img src={images[0]} alt={`${title} 1`} className="w-full h-full object-cover" />
-                </div>
-              </div>
-              <div className="space-y-4 pt-8">
-                <div className="aspect-[3/4] overflow-hidden rounded-lg">
-                  <img src={images[1]} alt={`${title} 2`} className="w-full h-full object-cover" />
-                </div>
-                <div className="aspect-[3/4] overflow-hidden rounded-lg">
-                  <img src={images[2]} alt={`${title} 3`} className="w-full h-full object-cover" />
-                </div>
-              </div>
-            </div>
+      {/* Content */}
+      <div className="relative container mx-auto px-6 py-24 min-h-[600px] flex items-center">
+        <div className={`max-w-2xl ${reverse ? 'ml-auto text-right' : ''}`}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 uppercase tracking-wide">
+            {title}
+          </h2>
+          <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
+            {description}
+          </p>
+          <div className={`flex flex-col sm:flex-row gap-4 ${reverse ? 'sm:justify-end' : ''}`}>
+            <Link to="/#contact">
+              <Button size="lg" className="px-8 py-6 text-base">
+                Get a Quote
+              </Button>
+            </Link>
+            <Link to="/portfolio">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="px-8 py-6 text-base bg-white/10 border-white text-white hover:bg-white hover:text-foreground backdrop-blur-sm"
+              >
+                View Portfolio
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
