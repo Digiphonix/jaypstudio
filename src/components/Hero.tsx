@@ -1,23 +1,13 @@
 import { useEffect, useState } from "react";
-import heroImage1 from "@/assets/hero-main.jpg";
-import heroImage2 from "@/assets/gallery-1.jpg";
-import heroImage3 from "@/assets/gallery-2.jpg";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-main.jpg";
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [heroImage1, heroImage2, heroImage3];
 
   useEffect(() => {
     setIsLoaded(true);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -28,8 +18,8 @@ const Hero = () => {
         }`}
       >
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-15 transition-opacity duration-1000"
-          style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
+          className="absolute inset-0 bg-cover bg-center opacity-20 transition-opacity duration-1000"
+          style={{ backgroundImage: `url(${heroImage})` }}
         />
       </div>
 
@@ -41,12 +31,21 @@ const Hero = () => {
               : "opacity-0 translate-y-10"
           }`}
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-primary-foreground mb-6 tracking-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-primary-foreground mb-12 tracking-tight">
             From Candid Laughter to Joyful Celebrations
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-primary-foreground/90 font-light tracking-wide max-w-3xl mx-auto">
-            At Jaypstudios, we believe that great photography isn&apos;t just about capturing faces — it&apos;s about capturing the emotions behind the facial expressions, and creating images that feel as powerful as the memories themselves.
-          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link to="/#contact">
+              <Button size="lg" className="px-8 py-6 text-lg">
+                Book Your Session
+              </Button>
+            </Link>
+            <Link to="/portfolio">
+              <Button size="lg" variant="outline" className="px-8 py-6 text-lg bg-background/10 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-background">
+                View Portfolio
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
 
