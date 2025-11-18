@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-main.jpg";
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -12,16 +11,21 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      <div
-        className={`absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black transition-opacity duration-1000 ${
-          isLoaded ? "opacity-100" : "opacity-0"
-        }`}
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
       >
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20 transition-opacity duration-1000"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        />
-      </div>
+        <source src="/videos/hero-background.mp4" type="video/mp4" />
+      </video>
+      
+      {/* Dark Overlay */}
+      <div className={`absolute inset-0 bg-black/50 transition-opacity duration-1000 ${
+        isLoaded ? "opacity-100" : "opacity-0"
+      }`} />
 
       <div className="absolute inset-0 flex items-center justify-center">
         <div
