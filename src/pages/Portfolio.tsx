@@ -48,11 +48,18 @@ const Portfolio = () => {
     ],
   };
 
-  const renderGallery = (images: typeof portfolioData.familyPortraits) => (
+  const categoryDescriptions = {
+    familyPortraits: "My family sessions focus on capturing genuine connection, natural interactions, and the unique personalities within your household. I guide you gently while allowing plenty of room for spontaneous moments. Whether we're indoors or outdoors, I create a relaxed environment where everyone feels comfortable. The result is a set of warm, meaningful portraits that grow more precious with time.",
+    personalPortraits: "Did you know that 50% of online consumers & clients say high quality images and videos are more important than reviews. Marketing tests reveal on average a customer is 40% more likely 'sign up' when presented with a real photograph when compared to a stock photograph. Let me tell your story to grow your audience and increase your sales.",
+    branding: "At JayPstudios, We create strategic branding images that capture your unique personality, mission, and visual identity. Every session is tailored to highlight what sets your business apart in a crowded market. Through professional lighting and intentional styling, we ensure your brand looks polished and trustworthy. These images help you attract the right clients, strengthen credibility, and elevate your online presence.",
+    weddings: "We document your wedding day with a storytelling approach that blends elegance, emotion, and authenticity. From morning preparations to your final dance, every detail is captured with care. My goal is to make you feel relaxed and fully immersed in your celebration while I preserve the moments you may miss. Your gallery becomes a timeless collection of memories you'll cherish for a lifetime.",
+  };
+
+  const renderGallery = (images: typeof portfolioData.familyPortraits, description: string) => (
     <div className="space-y-12">
       <div className="max-w-4xl mx-auto text-center px-6 py-8 bg-muted/30 rounded-lg">
         <p className="text-lg text-foreground leading-relaxed">
-          Did you know that <span className="font-semibold">50% of online consumers & clients</span> say high quality images and videos are more important than reviews. Marketing tests reveal on average a customer is <span className="font-semibold">40% more likely 'sign up'</span> when presented with a real photograph when compared to a stock photograph. Let me tell your story to grow your audience and increase your sales.
+          {description}
         </p>
       </div>
       
@@ -126,19 +133,19 @@ const Portfolio = () => {
             </TabsList>
 
             <TabsContent value="familyPortraits" className="mt-0">
-              {renderGallery(portfolioData.familyPortraits)}
+              {renderGallery(portfolioData.familyPortraits, categoryDescriptions.familyPortraits)}
             </TabsContent>
 
             <TabsContent value="personalPortraits" className="mt-0">
-              {renderGallery(portfolioData.personalPortraits)}
+              {renderGallery(portfolioData.personalPortraits, categoryDescriptions.personalPortraits)}
             </TabsContent>
 
             <TabsContent value="branding" className="mt-0">
-              {renderGallery(portfolioData.branding)}
+              {renderGallery(portfolioData.branding, categoryDescriptions.branding)}
             </TabsContent>
 
             <TabsContent value="weddings" className="mt-0">
-              {renderGallery(portfolioData.weddings)}
+              {renderGallery(portfolioData.weddings, categoryDescriptions.weddings)}
             </TabsContent>
           </Tabs>
         </div>
