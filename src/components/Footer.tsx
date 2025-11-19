@@ -1,3 +1,5 @@
+import { Mail } from "lucide-react";
+
 const Footer = () => {
   return (
     <footer className="bg-accent py-12 px-6">
