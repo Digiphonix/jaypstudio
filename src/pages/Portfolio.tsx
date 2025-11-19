@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import GetQuote from "@/components/GetQuote";
+import Experience from "@/components/Experience";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
@@ -166,6 +168,9 @@ const Portfolio = () => {
           </Tabs>
         </div>
       </section>
+
+      <GetQuote />
+      <Experience />
 
       <Footer />
     </div>
