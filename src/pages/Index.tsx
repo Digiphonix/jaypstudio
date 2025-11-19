@@ -19,7 +19,6 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <About />
       
       <ServiceSection
         title="Personal Branding"
@@ -47,6 +46,7 @@ const Index = () => {
         reverse
       />
       
+      <About />
       <Contact />
       <Footer />
     </div>
