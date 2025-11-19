@@ -13,9 +13,9 @@ const ServiceSection = ({ title, description, images, reverse = false }: Service
   return (
     <section className="py-20 px-6 bg-background">
       <div className="container mx-auto max-w-7xl">
-        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${reverse ? '' : ''}`}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Text Content */}
-          <div className={`${reverse ? 'lg:order-2' : 'lg:order-1'} space-y-6`}>
+          <div className={`${reverse ? 'lg:order-2' : 'lg:order-1'} order-1 space-y-6`}>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground uppercase tracking-tight">
               {title}
             </h2>
@@ -24,32 +24,10 @@ const ServiceSection = ({ title, description, images, reverse = false }: Service
                 <p key={idx}>{paragraph}</p>
               ))}
             </div>
-            <div className="pt-4 flex flex-wrap gap-4">
-              <a href="#contact">
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="group border-2 border-foreground text-foreground hover:bg-foreground hover:text-background rounded-full px-8 py-6 text-base font-semibold uppercase tracking-wide transition-all"
-                >
-                  Get a Quote
-                  <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </a>
-              <Link to="/portfolio">
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="group border-2 border-foreground text-foreground hover:bg-foreground hover:text-background rounded-full px-8 py-6 text-base font-semibold uppercase tracking-wide transition-all"
-                >
-                  View Portfolio
-                  <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-            </div>
           </div>
 
           {/* Image Grid */}
-          <div className={`${reverse ? 'lg:order-1' : 'lg:order-2'}`}>
+          <div className={`${reverse ? 'lg:order-1' : 'lg:order-2'} order-2`}>
             <div className="grid grid-cols-2 gap-4">
               {/* First Image */}
               <div className="aspect-square overflow-hidden rounded-lg">
@@ -76,6 +54,30 @@ const ServiceSection = ({ title, description, images, reverse = false }: Service
                 />
               </div>
             </div>
+          </div>
+
+          {/* Buttons - appear after images on mobile */}
+          <div className={`${reverse ? 'lg:order-3' : 'lg:order-3'} order-3 lg:col-span-2 pt-4 flex flex-wrap gap-4 justify-center lg:justify-start`}>
+            <a href="#contact">
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="group border-2 border-foreground text-foreground hover:bg-foreground hover:text-background rounded-full px-8 py-6 text-base font-semibold uppercase tracking-wide transition-all"
+              >
+                Get a Quote
+                <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
+            <Link to="/portfolio">
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="group border-2 border-foreground text-foreground hover:bg-foreground hover:text-background rounded-full px-8 py-6 text-base font-semibold uppercase tracking-wide transition-all"
+              >
+                View Portfolio
+                <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
