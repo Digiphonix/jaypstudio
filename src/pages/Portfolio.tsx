@@ -112,11 +112,8 @@ const Portfolio = () => {
             </p>
           </div>
 
-          <Tabs defaultValue="all" className="w-full">
-            <TabsList className="grid w-full max-w-3xl mx-auto grid-cols-5 mb-12">
-              <TabsTrigger value="all" className="text-sm md:text-base">
-                All
-              </TabsTrigger>
+          <Tabs defaultValue="familyPortraits" className="w-full">
+            <TabsList className="grid w-full max-w-3xl mx-auto grid-cols-4 mb-12">
               <TabsTrigger value="familyPortraits" className="text-sm md:text-base">
                 Family Portraits
               </TabsTrigger>
@@ -130,10 +127,6 @@ const Portfolio = () => {
                 Weddings
               </TabsTrigger>
             </TabsList>
-
-            <TabsContent value="all" className="mt-0">
-              {renderGallery(portfolioData.all)}
-            </TabsContent>
 
             <TabsContent value="familyPortraits" className="mt-0">
               {renderGallery(portfolioData.familyPortraits)}
