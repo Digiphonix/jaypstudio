@@ -45,7 +45,7 @@ const Hero = () => {
               </Button>
             </Link>
             <Link to="/portfolio">
-              <Button size="lg" variant="outline" className="px-8 py-6 text-lg bg-background/10 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-background">
+              <Button size="lg" className="px-8 py-6 text-lg bg-black text-white hover:bg-black/90">
                 View Portfolio
               </Button>
             </Link>
