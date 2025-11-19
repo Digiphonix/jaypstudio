@@ -1,7 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Gallery from "@/components/Gallery";
 import ServiceSection from "@/components/ServiceSection";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -21,24 +20,23 @@ const Index = () => {
       <Navigation />
       <Hero />
       <About />
-      <Gallery />
       
       <ServiceSection
         title="Personal Branding"
-        description="Your personal brand is often the first thing people encounter, before a meeting, a pitch or even a conversation. Let's capture your personality, fuel your content and grow your audience"
+        description="Your personal brand is often the first thing people encounter, before a meeting, a pitch or even a conversation. Lets capture your personality, fuel your content and grow your audience"
         images={[gallery1, gallery2, gallery3]}
       />
       
       <ServiceSection
         title="Family Portraits"
-        description="Timeless family portraits designed to preserve your legacy and fill your home with love. Preserve precious moments with your loved ones for generations to come"
+        description="Timeless family portrait designed to preserve your legacy and fill your home with love. Preserve precious moments with your loved ones for generations to come"
         images={[gallery4, gallery5, gallery6]}
         reverse
       />
       
       <ServiceSection
         title="Personal Portraits"
-        description="Personal portraits that capture your unique essence and personality. You deserve more than snapshots, you deserve a masterpiece"
+        description="Personal portraits that capture your unique essesce and personality. You deserve more than snapshots, you deserve a masterpiece"
         images={[gallery8, gallery10, gallery13]}
       />
       

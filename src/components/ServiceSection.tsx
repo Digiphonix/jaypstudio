@@ -24,14 +24,24 @@ const ServiceSection = ({ title, description, images, reverse = false }: Service
                 <p key={idx}>{paragraph}</p>
               ))}
             </div>
-            <div className="pt-4">
+            <div className="pt-4 flex flex-wrap gap-4">
+              <a href="#contact">
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="group border-2 border-foreground text-foreground hover:bg-foreground hover:text-background rounded-full px-8 py-6 text-base font-semibold uppercase tracking-wide transition-all"
+                >
+                  Get a Quote
+                  <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
               <Link to="/portfolio">
                 <Button 
                   variant="outline" 
                   size="lg"
                   className="group border-2 border-foreground text-foreground hover:bg-foreground hover:text-background rounded-full px-8 py-6 text-base font-semibold uppercase tracking-wide transition-all"
                 >
-                  {title}
+                  View Portfolio
                   <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
