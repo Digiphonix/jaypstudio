@@ -64,28 +64,36 @@ const Portfolio = () => {
   };
 
   const renderGallery = (images: typeof portfolioData.all) => (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
-      {images.map((image, index) => (
-        <div
-          key={index}
-          className="relative aspect-[4/5] overflow-hidden group cursor-pointer"
-          onMouseEnter={() => setHoveredIndex(index)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        >
-          <img
-            src={image.url}
-            alt={image.alt}
-            className={`w-full h-full object-cover transition-all duration-700 ${
-              hoveredIndex === index ? "scale-110" : "scale-100"
-            }`}
-          />
+    <div className="space-y-12">
+      <div className="max-w-4xl mx-auto text-center px-6 py-8 bg-muted/30 rounded-lg">
+        <p className="text-lg text-foreground leading-relaxed">
+          Did you know that <span className="font-semibold">50% of online consumers & clients</span> say high quality images and videos are more important than reviews. Marketing tests reveal on average a customer is <span className="font-semibold">40% more likely 'sign up'</span> when presented with a real photograph when compared to a stock photograph. Let me tell your story to grow your audience and increase your sales.
+        </p>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
+        {images.map((image, index) => (
           <div
-            className={`absolute inset-0 bg-black transition-opacity duration-300 ${
-              hoveredIndex === index ? "opacity-20" : "opacity-0"
-            }`}
-          />
-        </div>
-      ))}
+            key={index}
+            className="relative aspect-[4/5] overflow-hidden group cursor-pointer"
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <img
+              src={image.url}
+              alt={image.alt}
+              className={`w-full h-full object-cover transition-all duration-700 ${
+                hoveredIndex === index ? "scale-110" : "scale-100"
+              }`}
+            />
+            <div
+              className={`absolute inset-0 bg-black transition-opacity duration-300 ${
+                hoveredIndex === index ? "opacity-20" : "opacity-0"
+              }`}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 
