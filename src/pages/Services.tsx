@@ -93,8 +93,8 @@ const Services = () => {
                   </ul>
                 </div>
                 <div className="pt-6">
-                  <Button size="lg" className="px-8 py-6 text-base">
-                    BOOK NOW →
+                  <Button asChild size="lg" className="px-8 py-6 text-base">
+                    <a href="/#contact">BOOK NOW →</a>
                   </Button>
                 </div>
               </div>
@@ -179,8 +179,8 @@ const Services = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" className="px-8">
-              Request Custom Quote
+            <Button asChild size="lg" className="px-8">
+              <a href="/#contact">Request Custom Quote</a>
             </Button>
           </div>
         </div>
