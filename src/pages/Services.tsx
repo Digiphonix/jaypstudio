@@ -7,22 +7,26 @@ import { Check } from "lucide-react";
 const Services = () => {
   const services = [
     {
-      title: "Portrait Sessions",
-      description: "Authentic and expressive portraits that capture your unique personality",
-      price: "Starting at $350",
+      title: "Personal Branding",
+      description: "Personal branding photography – be seen as the go-to in your field. Show up with purpose. Connect with your audience. Attract your ideal clients through editorial-quality images that tell your story.",
+      price: "Starting at $1,200",
+      typicalSpend: "$2,500",
+      customQuote: "Packages start at $1,200 and client's typically spend around $2,500. Please complete the contact form below and I'll reach out with a custom quote right away.",
       features: [
-        "1-2 hour session",
-        "Professional editing",
-        "20+ digital images",
-        "Online gallery",
-        "Personal consultation",
-        "Location of your choice",
+        "Professional brand strategy session",
+        "Multiple outfit changes",
+        "Location scouting included",
+        "Professional editing & retouching",
+        "High-resolution digital files",
+        "Online gallery with download rights",
       ],
     },
     {
-      title: "Wedding Photography",
-      description: "Complete coverage of your special day from beginning to end",
-      price: "Starting at $2,500",
+      title: "Weddings & Events",
+      description: "Complete coverage of your special day from beginning to end. Capturing every meaningful moment with artistry and precision.",
+      price: "Starting at $1,999",
+      typicalSpend: "$3,000",
+      customQuote: "Packages start at $1,999 and client's typically spend around $3,000. Please complete the contact form below and I'll reach out with a custom quote right away.",
       features: [
         "8-10 hours coverage",
         "Two photographers",
@@ -30,19 +34,6 @@ const Services = () => {
         "Engagement session included",
         "Online gallery with print rights",
         "Custom wedding album option",
-      ],
-    },
-    {
-      title: "Event Photography",
-      description: "Professional coverage for corporate events, parties, and celebrations",
-      price: "Starting at $500",
-      features: [
-        "Up to 4 hours coverage",
-        "Professional editing",
-        "100+ digital images",
-        "Fast turnaround (3-5 days)",
-        "Online gallery",
-        "Print release included",
       ],
     },
   ];
@@ -74,7 +65,9 @@ const Services = () => {
                   {service.description}
                 </p>
                 <div className="pt-4">
-                  <p className="text-4xl font-bold text-foreground mb-6">{service.price}</p>
+                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                    {service.customQuote}
+                  </p>
                   <ul className="space-y-4">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3">
@@ -116,8 +109,8 @@ const Services = () => {
                 <Card className="border-2">
                   <CardContent className="p-6">
                     <div className="text-center">
-                      <p className="text-3xl font-bold text-foreground mb-2">{service.features[0].split(' ')[0]}</p>
-                      <p className="text-sm text-muted-foreground">Duration</p>
+                      <p className="text-3xl font-bold text-foreground mb-2">{service.typicalSpend}</p>
+                      <p className="text-sm text-muted-foreground">Typical Spend</p>
                     </div>
                   </CardContent>
                 </Card>
