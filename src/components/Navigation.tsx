@@ -45,7 +45,7 @@ const Navigation = () => {
             <img
               src={shouldShowDark ? logoBlack : logoWhite}
               alt="JayP Studios"
-              className="h-20 md:h-24 w-auto transition-opacity"
+              className="h-24 md:h-32 w-auto transition-opacity"
             />
           </Link>
 
