@@ -15,11 +15,33 @@ import gallery14 from "@/assets/gallery-14.jpg";
 import gallery15 from "@/assets/gallery-15.jpg";
 import gallery16 from "@/assets/gallery-16.jpg";
 import gallery18 from "@/assets/gallery-18.jpg";
+import branding1 from "@/assets/branding-1.jpg";
+import branding2 from "@/assets/branding-2.jpg";
+import branding3 from "@/assets/branding-3.jpg";
+import branding4 from "@/assets/branding-4.jpg";
+import branding5 from "@/assets/branding-5.jpg";
+import branding6 from "@/assets/branding-6.jpg";
+import branding7 from "@/assets/branding-7.jpg";
+import branding8 from "@/assets/branding-8.jpg";
+import branding9 from "@/assets/branding-9.jpg";
+import branding10 from "@/assets/branding-10.jpg";
 
 const Portfolio = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const portfolioData = {
+    branding: [
+      { url: branding1, alt: "Professional branding photography by Jaypstudios" },
+      { url: branding2, alt: "Corporate branding session" },
+      { url: branding3, alt: "Personal branding photography" },
+      { url: branding4, alt: "Professional brand portrait" },
+      { url: branding5, alt: "Strategic branding imagery" },
+      { url: branding6, alt: "Business branding portrait" },
+      { url: branding7, alt: "Lifestyle branding photography" },
+      { url: branding8, alt: "Professional headshot by Jaypstudios" },
+      { url: branding9, alt: "Group branding session" },
+      { url: branding10, alt: "Wellness branding photography" },
+    ],
     familyPortraits: [
       { url: gallery1, alt: "Portrait photography by Jaypstudios" },
       { url: gallery3, alt: "Family portrait session" },
@@ -35,12 +57,6 @@ const Portfolio = () => {
       { url: gallery13, alt: "Expressive personal portrait" },
       { url: gallery14, alt: "Elegant personal portrait" },
     ],
-    branding: [
-      { url: gallery2, alt: "Professional headshot by Jaypstudios" },
-      { url: gallery8, alt: "Group portrait photography" },
-      { url: gallery5, alt: "Personal branding photography" },
-      { url: gallery14, alt: "Elegant portrait photography" },
-    ],
     weddings: [
       { url: gallery4, alt: "Wedding celebration moment" },
       { url: gallery16, alt: "Candid wedding moment" },
@@ -49,9 +65,9 @@ const Portfolio = () => {
   };
 
   const categoryDescriptions = {
+    branding: "At JayPstudios, We create strategic branding images that capture your unique personality, mission, and visual identity. Every session is tailored to highlight what sets your business apart in a crowded market. Through professional lighting and intentional styling, we ensure your brand looks polished and trustworthy. These images help you attract the right clients, strengthen credibility, and elevate your online presence.",
     familyPortraits: "My family sessions focus on capturing genuine connection, natural interactions, and the unique personalities within your household. I guide you gently while allowing plenty of room for spontaneous moments. Whether we're indoors or outdoors, I create a relaxed environment where everyone feels comfortable. The result is a set of warm, meaningful portraits that grow more precious with time.",
     personalPortraits: "Did you know that 50% of online consumers & clients say high quality images and videos are more important than reviews. Marketing tests reveal on average a customer is 40% more likely 'sign up' when presented with a real photograph when compared to a stock photograph. Let me tell your story to grow your audience and increase your sales.",
-    branding: "At JayPstudios, We create strategic branding images that capture your unique personality, mission, and visual identity. Every session is tailored to highlight what sets your business apart in a crowded market. Through professional lighting and intentional styling, we ensure your brand looks polished and trustworthy. These images help you attract the right clients, strengthen credibility, and elevate your online presence.",
     weddings: "We document your wedding day with a storytelling approach that blends elegance, emotion, and authenticity. From morning preparations to your final dance, every detail is captured with care. My goal is to make you feel relaxed and fully immersed in your celebration while I preserve the moments you may miss. Your gallery becomes a timeless collection of memories you'll cherish for a lifetime.",
   };
 
@@ -104,8 +120,14 @@ const Portfolio = () => {
             </p>
           </div>
 
-          <Tabs defaultValue="familyPortraits" className="w-full">
+          <Tabs defaultValue="branding" className="w-full">
             <TabsList className="flex flex-wrap justify-center gap-3 bg-transparent p-0 mb-12">
+              <TabsTrigger 
+                value="branding" 
+                className="px-8 py-3 rounded-lg text-sm md:text-base font-medium data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-background data-[state=inactive]:text-foreground data-[state=inactive]:border data-[state=inactive]:border-border shadow-sm transition-all"
+              >
+                Branding
+              </TabsTrigger>
               <TabsTrigger 
                 value="familyPortraits" 
                 className="px-8 py-3 rounded-lg text-sm md:text-base font-medium data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-background data-[state=inactive]:text-foreground data-[state=inactive]:border data-[state=inactive]:border-border shadow-sm transition-all"
@@ -119,12 +141,6 @@ const Portfolio = () => {
                 Personal Portraits
               </TabsTrigger>
               <TabsTrigger 
-                value="branding" 
-                className="px-8 py-3 rounded-lg text-sm md:text-base font-medium data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-background data-[state=inactive]:text-foreground data-[state=inactive]:border data-[state=inactive]:border-border shadow-sm transition-all"
-              >
-                Branding
-              </TabsTrigger>
-              <TabsTrigger 
                 value="weddings" 
                 className="px-8 py-3 rounded-lg text-sm md:text-base font-medium data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-background data-[state=inactive]:text-foreground data-[state=inactive]:border data-[state=inactive]:border-border shadow-sm transition-all"
               >
@@ -132,16 +148,16 @@ const Portfolio = () => {
               </TabsTrigger>
             </TabsList>
 
+            <TabsContent value="branding" className="mt-0">
+              {renderGallery(portfolioData.branding, categoryDescriptions.branding)}
+            </TabsContent>
+
             <TabsContent value="familyPortraits" className="mt-0">
               {renderGallery(portfolioData.familyPortraits, categoryDescriptions.familyPortraits)}
             </TabsContent>
 
             <TabsContent value="personalPortraits" className="mt-0">
               {renderGallery(portfolioData.personalPortraits, categoryDescriptions.personalPortraits)}
-            </TabsContent>
-
-            <TabsContent value="branding" className="mt-0">
-              {renderGallery(portfolioData.branding, categoryDescriptions.branding)}
             </TabsContent>
 
             <TabsContent value="weddings" className="mt-0">
