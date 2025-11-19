@@ -98,17 +98,29 @@ const Portfolio = () => {
           </div>
 
           <Tabs defaultValue="familyPortraits" className="w-full">
-            <TabsList className="grid w-full max-w-3xl mx-auto grid-cols-4 mb-12">
-              <TabsTrigger value="familyPortraits" className="text-sm md:text-base">
+            <TabsList className="flex flex-wrap justify-center gap-3 bg-transparent p-0 mb-12">
+              <TabsTrigger 
+                value="familyPortraits" 
+                className="px-8 py-3 rounded-lg text-sm md:text-base font-medium data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-background data-[state=inactive]:text-foreground data-[state=inactive]:border data-[state=inactive]:border-border shadow-sm transition-all"
+              >
                 Family Portraits
               </TabsTrigger>
-              <TabsTrigger value="personalPortraits" className="text-sm md:text-base">
+              <TabsTrigger 
+                value="personalPortraits" 
+                className="px-8 py-3 rounded-lg text-sm md:text-base font-medium data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-background data-[state=inactive]:text-foreground data-[state=inactive]:border data-[state=inactive]:border-border shadow-sm transition-all"
+              >
                 Personal Portraits
               </TabsTrigger>
-              <TabsTrigger value="branding" className="text-sm md:text-base">
+              <TabsTrigger 
+                value="branding" 
+                className="px-8 py-3 rounded-lg text-sm md:text-base font-medium data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-background data-[state=inactive]:text-foreground data-[state=inactive]:border data-[state=inactive]:border-border shadow-sm transition-all"
+              >
                 Branding
               </TabsTrigger>
-              <TabsTrigger value="weddings" className="text-sm md:text-base">
+              <TabsTrigger 
+                value="weddings" 
+                className="px-8 py-3 rounded-lg text-sm md:text-base font-medium data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-background data-[state=inactive]:text-foreground data-[state=inactive]:border data-[state=inactive]:border-border shadow-sm transition-all"
+              >
                 Weddings
               </TabsTrigger>
             </TabsList>
