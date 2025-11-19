@@ -36,6 +36,21 @@ const Services = () => {
         "Custom wedding album option",
       ],
     },
+    {
+      title: "Portrait Sessions",
+      description: "Authentic and expressive portraits that capture your unique personality",
+      price: "Starting at $350",
+      typicalSpend: "$500",
+      customQuote: "Packages start at $350 and are perfect for individual portraits, headshots, and personal photography needs. Please complete the contact form below and I'll reach out with a custom quote right away.",
+      features: [
+        "1-2 hour session",
+        "Professional editing",
+        "20+ digital images",
+        "Online gallery",
+        "Personal consultation",
+        "Location of your choice",
+      ],
+    },
   ];
 
   return (
