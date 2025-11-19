@@ -4,16 +4,6 @@ const About = () => {
   return (
     <section className="py-24 px-6 bg-background">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-foreground mb-4 uppercase tracking-wide">
-            Ottawa Personal Branding, Family Portrait and Wedding Photographer
-          </h2>
-          <p className="text-base md:text-lg text-muted-foreground">
-            Capturing Motion, Emotion, & Film Feels.
-          </p>
-        </div>
-
-        {/* Feature Section with Circular Images */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="text-center">
             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">

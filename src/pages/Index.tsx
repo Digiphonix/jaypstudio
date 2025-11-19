@@ -20,6 +20,18 @@ const Index = () => {
       <Navigation />
       <Hero />
       
+      {/* Intro Section */}
+      <section className="py-16 px-6 bg-background">
+        <div className="container mx-auto max-w-6xl text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-foreground mb-4 uppercase tracking-wide">
+            Ottawa Personal Branding, Family Portrait and Wedding Photographer
+          </h2>
+          <p className="text-base md:text-lg text-muted-foreground">
+            Capturing Motion, Emotion, & Film Feels.
+          </p>
+        </div>
+      </section>
+      
       <ServiceSection
         title="Personal Branding"
         description="Your personal brand is often the first thing people encounter, before a meeting, a pitch or even a conversation. Lets capture your personality, fuel your content and grow your audience"
