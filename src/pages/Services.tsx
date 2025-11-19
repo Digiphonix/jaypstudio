@@ -93,8 +93,12 @@ const Services = () => {
                   </ul>
                 </div>
                 <div className="pt-6">
-                  <Button asChild size="lg" className="px-8 py-6 text-base">
-                    <a href="/#contact">BOOK NOW →</a>
+                  <Button 
+                    size="lg" 
+                    className="px-8 py-6 text-base"
+                    onClick={() => window.location.href = "/#contact"}
+                  >
+                    BOOK NOW →
                   </Button>
                 </div>
               </div>
@@ -179,8 +183,12 @@ const Services = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button asChild size="lg" className="px-8">
-              <a href="/#contact">Request Custom Quote</a>
+            <Button 
+              size="lg" 
+              className="px-8"
+              onClick={() => window.location.href = "/#contact"}
+            >
+              Request Custom Quote
             </Button>
           </div>
         </div>
