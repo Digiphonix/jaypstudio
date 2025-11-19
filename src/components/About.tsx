@@ -1,6 +1,4 @@
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery10 from "@/assets/gallery-10.jpg";
+import { Heart, BookOpen, Award } from "lucide-react";
 
 const About = () => {
   return (
@@ -18,8 +16,8 @@ const About = () => {
         {/* Feature Section with Circular Images */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="text-center">
-            <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-              <img src={gallery1} alt="Authentic Moments" className="w-full h-full object-cover" />
+            <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+              <Heart className="w-16 h-16 text-primary" />
             </div>
             <h3 className="text-2xl font-serif font-bold text-foreground mb-3">
               Authentic Moments
@@ -30,8 +28,8 @@ const About = () => {
           </div>
 
           <div className="text-center">
-            <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-              <img src={gallery4} alt="Emotional Storytelling" className="w-full h-full object-cover" />
+            <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+              <BookOpen className="w-16 h-16 text-primary" />
             </div>
             <h3 className="text-2xl font-serif font-bold text-foreground mb-3">
               Emotional Storytelling
@@ -42,8 +40,8 @@ const About = () => {
           </div>
 
           <div className="text-center">
-            <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-              <img src={gallery10} alt="Timeless Quality" className="w-full h-full object-cover" />
+            <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+              <Award className="w-16 h-16 text-primary" />
             </div>
             <h3 className="text-2xl font-serif font-bold text-foreground mb-3">
               Timeless Quality
