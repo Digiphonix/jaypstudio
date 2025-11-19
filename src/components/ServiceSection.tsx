@@ -51,26 +51,24 @@ const ServiceSection = ({ title, description, images, reverse = false }: Service
           {/* Image Grid */}
           <div className={`${reverse ? 'lg:order-1' : 'lg:order-2'}`}>
             <div className="grid grid-cols-2 gap-4">
-              {/* Large Image */}
-              <div className="row-span-2">
-                <div className="aspect-[3/4] overflow-hidden rounded-lg">
-                  <img 
-                    src={images[0]} 
-                    alt={`${title} showcase 1`} 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
-                  />
-                </div>
+              {/* First Image */}
+              <div className="aspect-square overflow-hidden rounded-lg">
+                <img 
+                  src={images[0]} 
+                  alt={`${title} showcase 1`} 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+                />
               </div>
-              {/* Top Small Image */}
-              <div className="rounded-full overflow-hidden aspect-square">
+              {/* Second Image */}
+              <div className="aspect-square overflow-hidden rounded-lg">
                 <img 
                   src={images[1]} 
                   alt={`${title} showcase 2`} 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
                 />
               </div>
-              {/* Bottom Small Image */}
-              <div className="aspect-[3/4] overflow-hidden rounded-lg">
+              {/* Third Image */}
+              <div className="aspect-square overflow-hidden rounded-lg">
                 <img 
                   src={images[2]} 
                   alt={`${title} showcase 3`} 
